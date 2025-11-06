@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ContactsTableSeeder extends Seeder
 {
@@ -24,8 +25,8 @@ class ContactsTableSeeder extends Seeder
             'building' => '千駄ヶ谷マンション101',
             'detail' => '届いた商品が注文した商品ではありませんでした。\r\n商品の取り替えをお願いします。'
         ];
-        for ($i = 1; i < 20; $i++) {
-            DB::table('contacts')->create($param);
+        for ($i = 1; $i < 20; $i++) {
+            DB::table('contacts')->insert($param);
         }
     }
 }

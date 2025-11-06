@@ -22,7 +22,7 @@ class CategoriesTableSeeder extends Seeder
             ['content' => 'その他']
         ];
         foreach ($params as $param) {
-            DB::table('categories')->create('$param');
+            DB::table('categories')->insert($param);
         }
     }
 }
