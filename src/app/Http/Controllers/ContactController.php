@@ -16,6 +16,7 @@ class ContactController extends Controller
 
     public function confirm(ContactRequest $request)
     {
-        return view('confirm');
+        $categories = Category::all();
+        return view('confirm', compact('request', 'categories'));
     }
 }
